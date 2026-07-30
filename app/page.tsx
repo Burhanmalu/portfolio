@@ -101,23 +101,6 @@ export default function Home() {
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
 
   useEffect(() => {
-    // Update the system clock
-    function updateClock() {
-      const now = new Date()
-      const timeStr =
-        now.getHours().toString().padStart(2, "0") +
-        ":" +
-        now.getMinutes().toString().padStart(2, "0") +
-        ":" +
-        now.getSeconds().toString().padStart(2, "0")
-      const statusElement = document.querySelector(".system-status")
-      if (statusElement) {
-        statusElement.textContent = `SYS_UP: ${timeStr} | CPU: ${Math.floor(Math.random() * 20) + 5}%`
-      }
-    }
-    updateClock()
-    const interval = setInterval(updateClock, 1000)
-
     const handleScroll = () => {
       if (window.scrollY > 500) {
         setShowScrollTop(true)
@@ -129,7 +112,6 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll)
 
     return () => {
-      clearInterval(interval)
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
@@ -162,7 +144,6 @@ export default function Home() {
             <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>CONTACT</a>
             <a href="#resume" onClick={() => setIsMobileMenuOpen(false)}>RESUME</a>
           </nav>
-          <div className="system-status desktop-only">SYS_UP: 24:12:05:08 | CPU: 12%</div>
         </div>
       </header>
 
@@ -182,20 +163,6 @@ export default function Home() {
             </a>
           </div>
           <div className="window-frame">
-            <div className="window-header">
-              <span>PORTRAIT_01.JPG</span>
-              <div className="window-controls">
-                <button className="window-btn" aria-label="Minimize">
-                  <span className="minimize-icon"></span>
-                </button>
-                <button className="window-btn" aria-label="Maximize">
-                  <span className="maximize-icon"></span>
-                </button>
-                <button className="window-btn window-close" aria-label="Close">
-                  <span className="close-icon"></span>
-                </button>
-              </div>
-            </div>
             <img src="/Profilephoto.jpeg" alt="Professional Portrait" className="hero-image" />
           </div>
         </section>
@@ -457,8 +424,8 @@ export default function Home() {
           </div>
           <h2 className="section-title" style={{ marginTop: 20 }}>Open Channel</h2>
 
-          <div className="contact-container">
-            <div className="contact-details">
+          <div className="contact-container" style={{ display: "block" }}>
+            <div className="contact-details" style={{ borderRight: "none", paddingRight: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "30px", width: "100%" }}>
               <div className="contact-item">
                 <span className="contact-item-label">Direct Line / Phone</span>
                 <span className="contact-item-value">
@@ -488,22 +455,6 @@ export default function Home() {
                 </span>
               </div>
             </div>
-
-            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-              <div className="form-group">
-                <label className="form-label" htmlFor="name">IDENTIFIER / NAME</label>
-                <input type="text" id="name" className="form-input" placeholder="Enter guest identifier..." />
-              </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="email">RETURN PATH / EMAIL</label>
-                <input type="email" id="email" className="form-input" placeholder="Enter return address..." />
-              </div>
-              <div className="form-group">
-                <label className="form-label" htmlFor="message">PAYLOAD / MESSAGE</label>
-                <textarea id="message" className="form-textarea" placeholder="Transmit packet contents here..."></textarea>
-              </div>
-              <button type="submit" className="btn-retro" style={{ alignSelf: "flex-start", marginTop: "10px" }}>TRANSMIT DATA</button>
-            </form>
           </div>
         </section>
 
@@ -512,12 +463,12 @@ export default function Home() {
           <div className="terminal-header" style={{ position: "absolute", top: -15, left: 20 }}>
             <span>USER_DATA_DUMP.EXE</span>
           </div>
-          <h2 className="section-title" style={{ marginTop: 10, justifyContent: "center" }}>Curriculum Vitae</h2>
+          <h2 className="section-title" style={{ marginTop: 10, justifyContent: "center" }}>Resume</h2>
           <p style={{ color: "var(--text-secondary)", marginBottom: "30px", fontFamily: "Space Mono, monospace" }}>
             {"> Ready to download comprehensive system specifications and candidate capabilities."}
           </p>
           <a href="/resume(Mernstack).png" target="_blank" className="btn-retro">
-            VIEW RESUME.PNG
+            VIEW RESUME
           </a>
         </section>
 
@@ -544,46 +495,7 @@ export default function Home() {
               <a href="mailto:Burhan.malu.learning@gmail.com" className="footer-link">{"[EMAIL] MAIL_TO"}</a>
             </div>
           </div>
-
-          {/* Column 3: Live System Status Panel */}
-          <div className="footer-col" style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
-            <span style={{ fontFamily: "var(--font-syne), Syne, sans-serif", fontWeight: "800", fontSize: "0.9rem", color: "var(--text-secondary)", textTransform: "uppercase", letterSpacing: "1px" }}>SYSTEM STATUS</span>
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontFamily: "var(--font-space-mono), Space Mono, monospace", fontSize: "0.85rem", color: "var(--text-secondary)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "var(--text-primary)" }}>
-                <span className="pulse-dot"></span> STATUS: ONLINE
-              </div>
-              <div>VERSION  : 2.0</div>
-              <div>SERVER   : STABLE</div>
-              <div>DEPLOY   : TODAY</div>
-              <div>UPTIME   : 99.99%</div>
-            </div>
-          </div>
-
-          {/* Column 4: Brand Section */}
-          <div className="footer-brand" style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <span style={{ fontFamily: "var(--font-syne), Syne, sans-serif", fontWeight: "800", fontSize: "0.8rem", color: "var(--accent-retro)", textTransform: "uppercase", letterSpacing: "1px" }}>END_OF_PAGE</span>
-            <h2 style={{ fontFamily: "var(--font-syne), Syne, sans-serif", fontSize: "1.8rem", fontWeight: "800", lineHeight: "1.1", margin: 0, textTransform: "uppercase" }}>
-              TransitOps
-            </h2>
-            <div style={{ fontFamily: "var(--font-space-mono), Space Mono, monospace", fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-              <div>Fleet Intelligence</div>
-              <div>Built by Burhan<span className="cursor-blink">_</span></div>
-              <div style={{ marginTop: "10px" }}>© 2026 All Rights Reserved</div>
-            </div>
-          </div>
-        </footer>
-
-        <div className="footer-badge">
-          <a href="https://v0.link/cdiK7jS" target="_blank" rel="noopener noreferrer" className="badge-link-footer">
-            <div className="badge-content-footer">
-              <span className="badge-label">UI:</span>
-              <span className="badge-highlight">1UI.dev</span>
-              <span className="badge-separator">→</span>
-              <span className="badge-label">LIVE:</span>
-              <span className="badge-highlight">v0.app</span>
-            </div>
-          </a>
-        </div>
+        </footer>        
       </div>
     </>
   )

@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TransitOps Fleet Intelligence",
     description: "TransitOps is a modern fleet intelligence platform featuring GIS mapping, fleet management, analytics, driver monitoring, risk assessment, real-time operational dashboards, and intelligent reporting.",
-    url: "https://transitops.vercel.app",
+    url: "https://burhanuddin-protfolio.vercel.app",
     siteName: "TransitOps",
     images: [
       {
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://transitops.vercel.app",
+    canonical: "https://burhanuddin-protfolio.vercel.app",
   },
 }
 
