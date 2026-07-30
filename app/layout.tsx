@@ -29,21 +29,31 @@ export const metadata: Metadata = {
     "Full Stack Developer specializing in .NET, Next.js, GIS Mapping, AI-powered applications, and modern web experiences.",
 
   keywords: [
-    "Fleet Management",
-    "GIS",
-    "TransitOps",
+    "Burhanuddin Mulla",
+    "Full Stack Developer",
+    ".NET Developer",
+    "ASP.NET Core",
+    "Next.js",
     "React",
+    "TypeScript",
+    "JavaScript",
+    "C#",
     "Node.js",
-    "MongoDB",
-    "Express",
-    "JWT",
-    "Developer Portfolio",
-    "Fleet Intelligence",
-    "Analytics Dashboard",
-    "Risk Radar",
+    "PostgreSQL",
+    "SQL Server",
+    "REST API",
+    "Tailwind CSS",
     "GIS Mapping",
-    "Transportation",
-    "Logistics"
+    "OpenStreetMap",
+    "Artificial Intelligence",
+    "Enterprise Software",
+    "Portfolio",
+    "Software Engineer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Web Developer",
+    "GitHub",
+    "India"
   ],
   authors: [{ name: "Burhanuddin Mulla" }],
   generator: "Next.js",
@@ -68,8 +78,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Burhanuddin Malu | Full Stack Developer",
     description:
-      "Explore my portfolio featuring TransitOps Fleet Intelligence, AI projects, GIS mapping, dashboards, and enterprise web applications.",
-
+      "Explore the portfolio of Burhanuddin Mulla, a Full Stack Developer specializing in .NET, Next.js, React, GIS Mapping, AI-powered applications, and scalable enterprise solutions.",
     url: "https://burhanuddin-protfolio.vercel.app",
     siteName: "Burhanuddin Portfolio",
 
