@@ -18,8 +18,16 @@ const _syne = Syne({
 })
 
 export const metadata: Metadata = {
-  title: "TransitOps Fleet Intelligence",
-  description: "TransitOps is a modern fleet intelligence platform featuring GIS mapping, fleet management, analytics, driver monitoring, risk assessment, real-time operational dashboards, and intelligent reporting.",
+  metadataBase: new URL("https://burhanuddin-protfolio.vercel.app"),
+
+  title: {
+    default: "Burhanuddin Malu | Full Stack Developer",
+    template: "%s | Burhanuddin",
+  },
+
+  description:
+    "Full Stack Developer specializing in .NET, Next.js, GIS Mapping, AI-powered applications, and modern web experiences.",
+
   keywords: [
     "Fleet Management",
     "GIS",
@@ -56,42 +64,40 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+
   openGraph: {
-    title: "TransitOps Fleet Intelligence",
-    description: "TransitOps is a modern fleet intelligence platform featuring GIS mapping, fleet management, analytics, driver monitoring, risk assessment, real-time operational dashboards, and intelligent reporting.",
+    title: "Burhanuddin Malu | Full Stack Developer",
+    description:
+      "Explore my portfolio featuring TransitOps Fleet Intelligence, AI projects, GIS mapping, dashboards, and enterprise web applications.",
+
     url: "https://burhanuddin-protfolio.vercel.app",
-    siteName: "TransitOps",
+    siteName: "Burhanuddin Portfolio",
+
     images: [
       {
-        url: "/Profilephoto.jpeg",
-        width: 600,
-        height: 600,
-        alt: "TransitOps Fleet Intelligence",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Burhanuddin Portfolio",
       },
     ],
+
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "TransitOps Fleet Intelligence",
-    description: "TransitOps is a modern fleet intelligence platform featuring GIS mapping, fleet management, analytics, driver monitoring, risk assessment, real-time operational dashboards, and intelligent reporting.",
-    images: ["/Profilephoto.jpeg"],
+    title: "Burhanuddin Malu | Portfolio",
+    description:
+      "Full Stack Developer | .NET | Next.js | GIS | AI",
+
+    images: ["/og-image.png"],
   },
-  manifest: "/manifest.json",
+
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://burhanuddin-protfolio.vercel.app",
   },
 }
 
